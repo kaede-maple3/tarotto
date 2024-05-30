@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>tarotto</title>
+        <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+        <script src="./main.js"></script>
+        <div class="select-kind">
+                <select name="kind" id="kind" onchange="change_kind()">
+                        <option value="" hidden>占いの種類</option>
+                        <option value="0">ツーオラクル</option>
+                        <option value="1">ツーマインド</option>
+                </select>
+                <button onclick="click_kind()">リセット</button>
+        </div>
+        <p> </p>
+        <p> </p>
+        <div class="TwoOracle" id="TwoOracle">
+                <div class="select-card1">
+                        <select name="card1" id="card1" onchange="change_TOC1()">
+                                <option value="" hidden>カード１枚目</option>
+                                <option value="0">00:愚者</option>
+                                <option value="1">01:魔術師</option>
+                                <option value="2">02:女教皇</option>
+                                <option value="3">03:女帝</option>
+                                <option value="4">04:皇帝</option>
+                                <option value="5">05:教皇</option>
+                                <option value="6">06:恋人</option>
+                                <option value="7">07:戦車</option>
+                                <option value="8">08:力</option>
+                                <option value="9">09:隠者</option>
+                                <option value="10">10:運命の輪</option>
+                                <option value="11">11:正義</option>
+                                <option value="12">12:吊るされた人</option>
+                                <option value="13">13:死神</option>
+                                <option value="14">14:節制</option>
+                                <option value="15">15:悪魔</option>
+                                <option value="16">16:塔</option>
+                                <option value="17">17:星</option>
+                                <option value="18">18:月</option>
+                                <option value="19">19:太陽</option>
+                                <option value="20">20:審判</option>
+                                <option value="21">21:世界</option>
+                        </select>
+                </div>
+                <div class="select-loc">
+                        <select name="loc" id="loc1" onchange="change_TOL1()">
+                                <option value="" hidden>カードの位置</option>
+                                <option value="0">正位置</option>
+                                <option value="1">逆位置</option>
+                        </select>
+                </div>
+                <p>意味:</p>
+                <h2 id="TOmeaning1">カードの意味</h2>
+                <div class="select-card1">
+                        <select name="card2" id="card2" onchange="change_TOC2()">
+                                <option value="" hidden>カード２枚目</option>
+                                <option value="0">00:愚者</option>
+                                <option value="1">01:魔術師</option>
+                                <option value="2">02:女教皇</option>
+                                <option value="3">03:女帝</option>
+                                <option value="4">04:皇帝</option>
+                                <option value="5">05:教皇</option>
+                                <option value="6">06:恋人</option>
+                                <option value="7">07:戦車</option>
+                                <option value="8">08:力</option>
+                                <option value="9">09:隠者</option>
+                                <option value="10">10:運命の輪</option>
+                                <option value="11">11:正義</option>
+                                <option value="12">12:吊るされた人</option>
+                                <option value="13">13:死神</option>
+                                <option value="14">14:節制</option>
+                                <option value="15">15:悪魔</option>
+                                <option value="16">16:塔</option>
+                                <option value="17">17:星</option>
+                                <option value="18">18:月</option>
+                                <option value="19">19:太陽</option>
+                                <option value="20">20:審判</option>
+                                <option value="21">21:世界</option>
+                        </select>
+                </div>
+                <div class="select-loc">
+                        <select name="loc" id="loc2" onchange="change_TOL2()">
+                                <option value="" hidden>カードの位置</option>
+                                <option value="0">正位置</option>
+                                <option value="1">逆位置</option>
+                        </select>
+                </div>
+                <p>意味:</p>
+                <h2 id="TOmeaning2">カードの意味</h2>
+                <p> </p>
+                <p> </p>
+                <div class="result">
+                        <button onclick="FResultTO()">決定</button>
+                        <p>占い結果</p>
+                        <h2 id="TOresult">結果はここ</h3>
+                </div>
+        </div>
+        <div class="TwoMind" id="TwoMind">
+                <div class="select-card1">
+                        <select name="2card1" id="2card1" onchange="change_TMC1()">
+                                <option value="" hidden>カード１枚目</option>
+                                <option value="0">00:愚者</option>
+                                <option value="1">01:魔術師</option>
+                                <option value="2">02:女教皇</option>
+                                <option value="3">03:女帝</option>
+                                <option value="4">04:皇帝</option>
+                                <option value="5">05:教皇</option>
+                                <option value="6">06:恋人</option>
+                                <option value="7">07:戦車</option>
+                                <option value="8">08:力</option>
+                                <option value="9">09:隠者</option>
+                                <option value="10">10:運命の輪</option>
+                                <option value="11">11:正義</option>
+                                <option value="12">12:吊るされた人</option>
+                                <option value="13">13:死神</option>
+                                <option value="14">14:節制</option>
+                                <option value="15">15:悪魔</option>
+                                <option value="16">16:塔</option>
+                                <option value="17">17:星</option>
+                                <option value="18">18:月</option>
+                                <option value="19">19:太陽</option>
+                                <option value="20">20:審判</option>
+                                <option value="21">21:世界</option>
+                        </select>
+                </div>
+                <div class="select-loc">
+                        <select name="loc" id="2loc1" onchange="change_TML1()">
+                                <option value="" hidden>カードの位置</option>
+                                <option value="0">正位置</option>
+                                <option value="1">逆位置</option>
+                        </select>
+                </div>
+                <p>意味:</p>
+                <h2 id="TMmeaning1">カードの意味</h2>
+                <div class="select-card1">
+                        <select name="card2" id="2card2" onchange="change_TMC2()">
+                                <option value="" hidden>カード２枚目</option>
+                                <option value="0">00:愚者</option>
+                                <option value="1">01:魔術師</option>
+                                <option value="2">02:女教皇</option>
+                                <option value="3">03:女帝</option>
+                                <option value="4">04:皇帝</option>
+                                <option value="5">05:教皇</option>
+                                <option value="6">06:恋人</option>
+                                <option value="7">07:戦車</option>
+                                <option value="8">08:力</option>
+                                <option value="9">09:隠者</option>
+                                <option value="10">10:運命の輪</option>
+                                <option value="11">11:正義</option>
+                                <option value="12">12:吊るされた人</option>
+                                <option value="13">13:死神</option>
+                                <option value="14">14:節制</option>
+                                <option value="15">15:悪魔</option>
+                                <option value="16">16:塔</option>
+                                <option value="17">17:星</option>
+                                <option value="18">18:月</option>
+                                <option value="19">19:太陽</option>
+                                <option value="20">20:審判</option>
+                                <option value="21">21:世界</option>
+                        </select>
+                </div>
+                <div class="select-loc">
+                        <select name="loc" id="2loc2" onchange="change_TML2()">
+                                <option value="" hidden>カードの位置</option>
+                                <option value="0">正位置</option>
+                                <option value="1">逆位置</option>
+                        </select>
+                </div>
+                <p>意味:</p>
+                <h2 id="TMmeaning2">カードの意味</h2>
+                <p> </p>
+                <p> </p>
+                <div class="result">
+                        <button onclick="FResultTM()">決定</button>
+                        <p>占い結果</p>
+                        <h2 id="TMresult">結果はここ</h3>
+                </div>
+        </div>
+</body>
+</html>
