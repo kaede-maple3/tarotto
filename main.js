@@ -160,6 +160,7 @@ function change_TO2(){
 function FResultTO(){
         if(!TOC1==false && !TOL1 == false && !TOC2==false && !TOL2 == false){
                 console.log("OK")
+                TOresult.textContent = fortune_result[TOC1-1][TOL1-1] + "/" + fortune_result[TOC2-1][TOL2-1]
         }else{
                 TOresult.textContent = "未入力の項目があります"
         }
@@ -198,6 +199,7 @@ function change_TM2(){
 function FResultTM(){
         if(!TMC1==false && !TML1 == false && !TMC2==false && !TML2 == false){
                 console.log("OK")
+                TMresult.textContent = fortune_result[TMC1-1][TML1-1] + "/" + fortune_result[TMC2-1][TML2-1]
         }else{
                 TMresult.textContent = "未入力の項目があります"
         }
